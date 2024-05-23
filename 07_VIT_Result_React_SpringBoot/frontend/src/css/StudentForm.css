@@ -1,0 +1,40 @@
+StudentForm.css
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    color: aliceblue;
+  }
+  
+  .text {
+    margin: 10px 0;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .input {
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .subject-container {
+    margin-bottom: 20px;
+  }
+  
+  .submit-button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
