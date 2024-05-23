@@ -1,0 +1,107 @@
+body {
+  background-color: #f0f3f8; /* Pastel blue */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #a5d6a7 !important; /* Pastel green */
+  margin-bottom: 20px;
+  padding: 15px 0;
+  text-align: center; /* Center align the text */
+}
+
+.navbar-brand {
+  font-size: 28px; /* Increase font size */
+  font-family: 'Arial', sans-serif; /* Change font family */
+  font-weight: bold; /* Make it bold */
+  color: #212121; /* Dark gray */
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0; /* Light gray */
+}
+
+.table th {
+  background-color: #90caf9; /* Pastel blue */
+  color: #212121; /* Dark gray */
+}
+
+.table-success {
+  background-color: #c8e6c9 !important; /* Lighter pastel green */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 97%;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #bdbdbd; /* Light gray */
+  border-radius: 4px;
+  padding: 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #64b5f6; /* Lighter pastel blue */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25); /* Lighter pastel blue */
+}
+
+.btn {
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #ffd54f; /* Pastel yellow */
+  border-color: #ffd54f; /* Pastel yellow */
+  color: #212121; /* Dark gray */
+}
+
+.btn-warning:hover {
+  background-color: #ffe082; /* Lighter pastel yellow */
+  border-color: #ffe082; /* Lighter pastel yellow */
+  color: #212121; /* Dark gray */
+}
+
+.output {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+}
