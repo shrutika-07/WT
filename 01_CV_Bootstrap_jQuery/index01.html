@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Name - Curriculum Vitae</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+        }
+
+        .container {
+            z-index: 1;
+            position: relative;
+            margin-top: 80px;
+            color: #fff;
+        }
+
+        #pfp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .content-container {
+            height: 100vh;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills-list li {
+            width: 48%;
+            margin-bottom: 10px;
+        }
+
+        .skill {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #fff;
+            color: #a02424;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .certification-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video id="video-background" playsinline autoplay muted loop>
+        <source src="bgvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div class="content-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Your Name</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias ea et maxime ducimus consectetur inventore iste. Deserunt voluptatibus deleniti reprehenderit incidunt tenetur repudiandae sunt est explicabo, quasi error perferendis!</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="pfp.jpg" alt="Your Name" id="pfp" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Education</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>School/Diploma</th>
+                                <th>College/University Name</th>
+                                <th>CGPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>High School</td>
+                                <td>Your High School Name</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>University</td>
+                                <td>University Name</td>
+                                <td>3.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Experience</h2>
+                    <p>Company Name - Web Developer (2020-present)</p>
+                    <p>Previous Company - Frontend Developer (2018-2020)</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li><span class="skill">HTML5</span></li>
+                        <li><span class="skill">CSS3</span></li>
+                        <li><span class="skill">JavaScript</span></li>
+                        <li><span class="skill">Bootstrap</span></li>
+                        <li><span class="skill">React.js</span></li>
+                        <li><span class="skill">Node.js</span></li>
+                        <li><span class="skill">Git</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="project-item">
+                        <p>Project 1 - Description and role (Year)</p>
+                    </div>
+                    <div class="project-item">
+                        <p>Project 2 - Description and role (Year)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="certification-item">
+                        <p>Certification 1 - Issuing Organization (Year)</p>
+                    </div>
+                    <div class="certification-item">
+                        <p>Certification 2 - Issuing Organization (Year)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-item">
+                        <p>Email: your.email@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>Phone: +1 (123) 456-7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>LinkedIn: linkedin.com/in/yourname</p>
+                    </div>
+                    <div class="contact-item">
+                        <p>GitHub: github.com/yourusername</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Inline jQuery -->
+    <script>
+        // jQuery document ready function
+        $(document).ready(function () {
+            // Change the color of section titles
+            $('.section-title').css('color', '#ffdc00');
+        });
+    </script>
+</body>
+</html>
