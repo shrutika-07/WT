@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Basic styling for the body to center the content and set a background color */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling the container to make it look like a card */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Centering the title and adding some margin for spacing */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        /* Styling the input field to make it look nicer */
+        #input {
+            width: 92%;
+            padding: 15px;
+            font-size: 24px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        /* Using CSS Grid to layout the buttons in a grid format */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        /* Basic button styling */
+        button {
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Different styling for operation buttons */
+        button.operation {
+            background-color: #28a745;
+        }
+
+        /* Hover effect for operation buttons */
+        button.operation:hover {
+            background-color: #218838;
+        }
+
+        /* Different styling for the equal button */
+        button.equal {
+            background-color: #ffc107;
+        }
+
+        /* Hover effect for the equal button */
+        button.equal:hover {
+            background-color: #e0a800;
+        }
+
+        /* Different styling for the clear button */
+        button.clear {
+            background-color: #dc3545;
+        }
+
+        /* Hover effect for the clear button */
+        button.clear:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <input type="text" id="input" readonly>
+        <div class="button-grid">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operation" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operation" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operation" onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operation" onclick="appendToDisplay('/')">/</button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize an empty string to store the display value
+        let displayValue = "";
+
+        // Function to append a value to the display
+        function appendToDisplay(value) {
+            // Add the clicked value to the current display value
+            displayValue += value;
+            // Update the input field with the new display value
+            document.getElementById("input").value = displayValue;
+        }
+
+        // Function to calculate the result
+        function calculate() {
+            try {
+                // Evaluate the expression in the display value
+                displayValue = eval(displayValue);
+                // Update the input field with the result
+                document.getElementById("input").value = displayValue;
+            } catch (error) {
+                // If there is an error (e.g., invalid expression), show "Error"
+                document.getElementById("input").value = "Error";
+            }
+        }
+
+        // Function to clear the display
+        function clearDisplay() {
+            // Reset the display value to an empty string
+            displayValue = "";
+            // Clear the input field
+            document.getElementById("input").value = "";
+        }
+    </script>
+</body>
+</html>
